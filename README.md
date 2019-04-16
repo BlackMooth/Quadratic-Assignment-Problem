@@ -4,6 +4,18 @@ Modular adaptation is an essential point to achieve, so Random.hh, QClass.hh and
 
 qapdata.tar.gz and qapsoln.tar.gz are, respectively, instances and solutions taken from QAPLIB (http://anjos.mgi.polymtl.ca/qaplib/)
 
+Ten algorithms presented are:
+·Multi-Start
+·GRASP
+·Iterated Local Search
+·Tabu Search
+·Simulated Annealing
+·Variable Neighbourhood Search	
+·Genetic Algorithm
+·Particle Swarm Optimization
+·MultiGreedy
+·Sample and Clustering
+
 Enjoy it!
 
 STILL UNDER CONSTRUCTION
