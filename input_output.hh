@@ -11,12 +11,35 @@
 #ifndef INPUT_OUTPUT_HH
 #define INPUT_OUTPUT_HH
 
+#include <fstream>
+#include <cstdlib>
+#include <vector>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>	
+#include <iostream>
+#include <sstream>
+#include <chrono>  // for high_resolution_clock
+
 using namespace std;
 
+/* This little function is thought to be called after doing "ls *.dat -R > list.dat" in Linux env. */
+/* Then saves all individuals we wanna test in an array to automatize input files process */
 
-inline void inputData(int **& DISTANCE, int **& FLOW, int& NUMBER_OBJECTS) {
+inline void listing(vector<string>& benchmarck) {
+	std::ifstream ifile("list.dat", std::ios::in);
+
+	if (!ifile.is_open()) {
+		std::cerr << "There was a problem opening the list file!\n";
+		exit(1);
+	}
+	string indiv;
+	while (ifile >> indiv) benchmarck.push_back(indiv);
+} 
+
+inline void inputData(int **& DISTANCE, int **& FLOW, int& NUMBER_OBJECTS, const string indiv) {
 	FILE * file;
-	file = fopen("data.dat", "r");
+	file = fopen(indiv.c_str(), "r");
    if(file == NULL)
    {
    	printf("File Not Found in Current Directory.");
@@ -127,5 +150,4 @@ inline void inputData(int **& DISTANCE, int **& FLOW, int& NUMBER_OBJECTS) {
 }
 
 #endif
-
 
