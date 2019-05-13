@@ -5,7 +5,7 @@
 using namespace std;
 
 /* Probability of accepting a worse solution in localImprovement */
-const double WORSE_ACCEPTANCE_PROB = 0.0;
+const double WORSE_ACCEPTANCE_PROB = 0.1;
 /* Number of Generations */
 const int GENERATIONS = 1000000;
 /* Number of local Improvements to perform */
@@ -235,7 +235,7 @@ int main(void)
       	count++;
          if(count > SHUFFLE_TOLERANCE)
          {
-         	shufflePopulation(population);
+            shufflePopulation(population);
             count = 0;
          }
       }
