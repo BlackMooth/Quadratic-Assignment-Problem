@@ -1,10 +1,9 @@
 # Quadratic-Assignment-Problem
-In this repo I pretend presenting ten different heuristic C++ implementations for solving classic QAP.
-Modular adaptation is an essential point to achieve, so Random.hh, QClass.hh and InputOutput.hh must be included in all ten algorithms to work and to be equipared adequatedely in computational measuring tasks.
+In this repo I pretend presenting nine different heuristic C++ implementations for solving classic QAP.
 
 qapdata.tar.gz and qapsoln.tar.gz are, respectively, instances and solutions taken from QAPLIB (http://anjos.mgi.polymtl.ca/qaplib/)
 
-Ten algorithms presented are:
+9 algorithms presented are:
 <ul>
 <b> 
   <li>Multi-Start</li>
@@ -22,4 +21,3 @@ Ten algorithms presented are:
 
 Enjoy it!
 
-STILL UNDER CONSTRUCTION
